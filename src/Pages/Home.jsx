@@ -11,7 +11,7 @@ const Home = () => {
 
 	return (
 		<div className="h-screen overflow-hidden flex flex-row">
-			<aside className={`bg-brand-dark-blue w-80 min-w-max p-6 h-screen flex flex-col overflow-y-auto absolute top-0 z-50 lg:relative lg:left-0 ${drawerOpen?'right-0': '-right-full'} transition-all duration-500 lg:transition-none`} >
+			<aside className={`bg-brand-dark-blue w-80 min-w-max p-6 h-screen flex flex-col overflow-y-auto absolute top-0 z-50 lg:relative lg:left-0 ${drawerOpen?'left-0': '-left-full'} transition-all duration-500 lg:transition-none`} >
 				<img src={logo} alt="" className="w-28 mb-16 hidden lg:block" />
                 <button className='text-white p-2 mb-8  hover:bg-white/10 w-min rounded-xl ml-auto lg:hidden' onClick={()=>setDrawerOpen(false)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -49,11 +49,11 @@ const Home = () => {
 					<section>
                         <div className='bg-white/10 p-4 w-full rounded-xl overflow-hidden'>
                             <div className="flex justify-between">
-                                <div className="flex gap-2">
+                                <div className="flex gap-3">
                                     <div className="w-12 h-12 rounded-full bg-white/20 border-solid border-white border-2"></div>
                                     <div className="flex flex-col text-white">
                                         <div>Hello,👋</div>
-                                        <div className="text-ellipsis overflow-hidden w-32 max-h-5">
+                                        <div className="text-ellipsis overflow-hidden w-32 max-h-5 font-semibold">
                                             Abhisek Maiti
                                         </div>
                                     </div>
@@ -85,15 +85,20 @@ const Home = () => {
 				</section>
 			</aside>
 			<section className='h-screen w-full overflow-hidden'>
-                <header className='h-16 flex justify-between items-center p-6'>
+                <header className='h-16 bg-white flex justify-between items-center p-6 lg:hidden'>
 				    <img src={logo_light} alt="" className="w-24" />
-                    <button className='border border-solid border-blue-300 p-2 rounded-lg hover:bg-bg-page-dark transition' onClick={()=>setDrawerOpen(true)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </button>
+                    <div className='flex'>
+                        <div>
+                            <Notification />
+                        </div>
+                        <button className='border border-solid border-blue-300 p-2 rounded-lg hover:bg-bg-page-dark transition' onClick={()=>setDrawerOpen(true)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
                 </header>
-                <nav className='border-b border-solid border-black/10 w-full overflow-x-auto flex gap-16 justify-between items-center'>
+                <nav className='border-b border-solid border-black/10 w-full bg-white overflow-x-auto flex gap-16 justify-between items-center'>
                     <section className=' text-gray-700 font-600 flex xl:gap-5 2xl:gap-7 2xl:text-lg'>
                         <button className='p-6 nav-active hover:bg-black/5'>Dashboard</button>
                         <button className='p-6 hover:bg-black/5'>Payout</button>
@@ -101,10 +106,14 @@ const Home = () => {
                         <button className='p-6 hover:bg-black/5'>Fund&nbsp;Manager</button>
                         <button className='p-6 hover:bg-black/5'>Settings</button>
                     </section>
-                    <Notification />
+                    <div className='hidden lg:flex'>
+                        <Notification />
+                    </div>
                 </nav>
                 <main className='bg-bg-page-dark h-full overflow-y-auto p-5'>
-
+                    <div className='max-w-5xl m-auto'>
+                        {/* Yo */}
+                    </div>
                 </main>
             </section>
 		</div>
