@@ -7,13 +7,21 @@
 ::-webkit-scrollbar {
   width: 7px;
   height: 0;
-  background: #051544;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #053897;
 }
-
+#aside::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  transition: 0.25s;
+}
+#aside:hover::-webkit-scrollbar-thumb {
+  background-color: #053897;
+}
+#aside {
+  scrollbar-gutter: stable;
+}
 body {
   background-color: #f1f6ff;
   font-family: "Poppins", sans-serif;

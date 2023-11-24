@@ -15,7 +15,8 @@ const Home = () => {
 	return (
 		<div className="h-screen overflow-hidden flex flex-row">
 			<aside
-				className={`bg-brand-dark-blue w-80 min-w-max p-6 h-screen flex flex-col overflow-y-auto absolute top-0 z-50 lg:relative lg:left-0 ${
+                id='aside'
+				className={`bg-brand-dark-blue w-80 min-w-max p-6 pr-5 h-screen flex flex-col overflow-y-auto absolute top-0 z-50 lg:relative lg:left-0 ${
 					drawerOpen
 						? 'left-0'
 						: 'min-[320px]:-left-full min-[100px]:-left-[350%]'
@@ -70,7 +71,7 @@ const Home = () => {
 						/>
 					</section>
 					<section>
-						<div className="bg-white/10 p-4 py-3 w-full rounded-xl overflow-hidden">
+						<div className="bg-white/10 p-4 w-full rounded-xl overflow-hidden">
 							<div className="flex justify-between">
 								<div className="flex gap-2">
 									<div className="w-12 h-12 rounded-full bg-white/20 border-solid border-white border-2"></div>
