@@ -9,6 +9,9 @@ module.exports = {
         "border-light-blue": "#000066",
         "stroke-light": "#3366FF",
       },
+      screens: {
+        mobile: "200px",
+      },
     },
   },
   plugins: [],

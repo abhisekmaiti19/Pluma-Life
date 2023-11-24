@@ -14,7 +14,9 @@ const Home = () => {
     <div className="h-screen overflow-hidden flex flex-row">
       <aside
         className={`bg-brand-dark-blue w-80 min-w-max p-6 h-screen flex flex-col overflow-y-auto absolute top-0 z-50 lg:relative lg:left-0 ${
-          drawerOpen ? "left-0" : "-left-full"
+          drawerOpen
+            ? "left-0"
+            : "min-[320px]:-left-full min-[100px]:-left-[350%]"
         } transition-all duration-500 lg:transition-none`}
       >
         <img src={logo} alt="" className="w-28 mb-16 hidden lg:block" />
@@ -97,7 +99,11 @@ const Home = () => {
           </section>
         </section>
       </aside>
-      <section className="h-screen w-full overflow-hidden">
+      <section
+        className={`h-screen w-full overflow-hidden ${
+          drawerOpen ? "opacity-20" : "opacity-100"
+        }`}
+      >
         <header className="h-16 bg-white flex justify-between items-center p-6 lg:hidden">
           <img src={logo_light} alt="" className="w-24" />
           <div className="flex">
@@ -125,7 +131,7 @@ const Home = () => {
             </button>
           </div>
         </header>
-        <nav className="border-b border-solid border-black/10 w-full bg-white overflow-x-auto flex gap-16 justify-between items-center">
+        <nav className="border-b border-solid border-black/10 w-full bg-white min-[200px]:overflow-x-auto lg:overflow-hidden flex gap-10 justify-between items-center">
           <section className=" text-gray-700 font-600 flex xl:gap-5 2xl:gap-7 2xl:text-lg">
             <button className="p-6 nav-active hover:bg-black/5">
               Dashboard
@@ -140,7 +146,7 @@ const Home = () => {
           </div>
         </nav>
         <main className="bg-bg-page-dark h-full overflow-y-auto p-5">
-          <div className="max-w-5xl m-auto">
+          <div className="max-w-6xl h-full m-auto">
             <Dashboard />
           </div>
         </main>

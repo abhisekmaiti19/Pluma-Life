@@ -16,7 +16,7 @@
 
 body {
   background-color: #f1f6ff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,6 +41,7 @@ body {
   border-radius: 10px;
   transform: translateX(-50%);
   background-color: #5a92fa;
+  z-index: 0;
 }
 
 @tailwind base;
