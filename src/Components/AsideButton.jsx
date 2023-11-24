@@ -86,7 +86,7 @@ const iconsArray = {
 const AsideButton = ({ icon, text, isActive }) => {
   return (
     <button
-      className={`flex items-center gap-5 2xl:gap-7 text-white px-4 py-3 2xl:px-6 2xl:py-4  mb-4 w-full rounded-lg ${
+      className={`flex items-center gap-5 2xl:gap-7 text-white px-4 py-3 3xl:px-6 3xl:py-4 mb-4 w-full rounded-lg ${
         isActive ? "bg-white/20" : ""
       } hover:bg-white/10 transition duration-200`}
     >
