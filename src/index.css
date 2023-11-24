@@ -15,7 +15,8 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  background-color: #f1f6ff;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,10 +41,6 @@ body {
   border-radius: 10px;
   transform: translateX(-50%);
   background-color: #5a92fa;
-}
-
-.lottie {
-  background-color: red;
 }
 
 @tailwind base;
