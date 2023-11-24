@@ -7,13 +7,21 @@
 ::-webkit-scrollbar {
   width: 7px;
   height: 0;
-  background: #051544;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #053897;
 }
-
+#aside::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  transition: 0.25s;
+}
+#aside:hover::-webkit-scrollbar-thumb {
+  background-color: #053897;
+}
+#aside {
+  scrollbar-gutter: stable;
+}
 body {
   background-color: #f1f6ff;
   font-family: "Poppins", sans-serif;
@@ -33,16 +41,53 @@ body {
 .nav-active::before {
   content: "";
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   bottom: 0px;
   left: 50%;
-  width: 70%;
+  width: 0%;
   height: 3px;
   border-radius: 10px;
   transform: translateX(-50%);
   background-color: #5a92fa;
-  z-index: 0;
+  animation: smoothwidth 0.05s forwards ease-in-out;
 }
+@keyframes smoothwidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.drawer-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+.backdrop-animation {
+  animation: backdrop-anim 0.2s forwards ease-in-out;
+}
+
+@keyframes backdrop-anim {
+  0% {
+    z-index: -10;
+    opacity: 0;
+  }
+  1% {
+    z-index: 20;
+    opacity: 0;
+  }
+  100% {
+    z-index: 20;
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
 
 @tailwind base;
 @tailwind components;
