@@ -11,29 +11,16 @@ import Statuscard from "../Components/Dashboard/Statuscard";
 
 export default function Dashboard() {
   return (
-    <div className="w-full h-[91.5%] bg-bg-page-dark  flex justify-between overflow-hidden">
-      <section className="lg:w-3/5 min-[200px]:w-full h-full mt-2 px-4 overflow-y-hidden gap-4 flex flex-col">
-        <div className="overflow-y-auto h-full customscroll">
-          <div className="w-full h-1/5 mt-4 border pt-2 flex flex-col gap-4">
-            <Message message={"Abhisek"} img={hi} />
-            <div className="w-full h-full border border-blackflex flex items-center">
-              <Statuscard />
-            </div>
-          </div>
-        </div>
+    <div className="w-full h-full bg-bg-page-dark border-2 border-solid border-black flex justify-between overflow-hidden">
+      <section className="lg:w-3/5 min-[200px]:w-full  h-full bg-slate-500 border-2 mt-2 p-6 overflow-y-auto gap-4 flex flex-col">
+        <div className="w-full h-1/2 bg-white">p</div>
+        <div className="w-full h-1/2 bg-white">p</div>
+        <div className="w-full h-1/2 bg-white">p</div>
       </section>
 
-      <section className="lg:w-2/5 lg:h-full p-6 bg-white rounded-xl border-2 mt-2 lg:block min-[200px]:hidden overflow-hidden">
+      <section className="lg:w-2/5 lg:h-full p-6 bg-white rounded-xl border-2 mt-2 lg:block min-[200px]:hidden">
         {/* Anouncement and Important section  */}
-        <div className="w-full h-full overflow-y-auto customscroll flex flex-col gap-4">
-          <Anouncement compimg={mic} text="" />
-          <Importantcard
-            compimg={imp}
-            text=""
-            binance={binance}
-            ironfx={ironfx}
-          />
-        </div>
+        <Anouncement compimg={mic} text="" />
       </section>
     </div>
   );
