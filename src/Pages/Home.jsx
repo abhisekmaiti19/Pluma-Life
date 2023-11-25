@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-import Dashboard from "./Dashboard";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import logo_light from "../assets/logo-light.png";
 import AsideButton from "../Components/AsideButton";
 import Notification from "../Components/Notification";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [dropDown, setDropDown] = useState(true);
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -13,7 +15,8 @@ const Home = () => {
   return (
     <div className="h-screen overflow-hidden flex flex-row">
       <aside
-        className={`bg-brand-dark-blue w-80 min-w-max p-6 h-screen flex flex-col overflow-y-auto absolute top-0 z-50 lg:relative lg:left-0 ${
+        id="aside"
+        className={`bg-brand-dark-blue w-80 min-w-max p-6 pr-5 h-screen flex flex-col overflow-y-auto absolute top-0 z-50 lg:relative lg:left-0 ${
           drawerOpen
             ? "left-0"
             : "min-[320px]:-left-full min-[100px]:-left-[350%]"
@@ -99,11 +102,13 @@ const Home = () => {
           </section>
         </section>
       </aside>
-      <section
-        className={`h-screen w-full overflow-hidden ${
-          drawerOpen ? "opacity-20" : "opacity-100"
-        }`}
-      >
+      <section className="h-screen w-full overflow-hidden">
+        <div
+          className={`drawer-backdrop bg-white/70 ${
+            drawerOpen ? "backdrop-animation" : ""
+          }`}
+          onClick={() => setDrawerOpen(false)}
+        ></div>
         <header className="h-16 bg-white flex justify-between items-center p-6 lg:hidden">
           <img src={logo_light} alt="" className="w-24" />
           <div className="flex">
@@ -131,23 +136,56 @@ const Home = () => {
             </button>
           </div>
         </header>
-        <nav className="border-b border-solid border-black/10 w-full bg-white min-[200px]:overflow-x-auto lg:overflow-hidden flex gap-10 justify-between items-center">
-          <section className=" text-gray-700 font-600 flex xl:gap-5 2xl:gap-7 2xl:text-lg">
-            <button className="p-6 nav-active hover:bg-black/5">
+        <nav className="border-b border-solid border-black/10 w-full bg-white min-[200px]:overflow-x-auto flex gap-10 justify-between items-center">
+          <section className=" text-gray-700 font-600 flex gap-1 xl:gap-5 2xl:gap-7 2xl:text-lg p-2 pb-0">
+            <button
+              className={`px-5 md:px-6 lg:px-5 xl:px-6 py-4 rounded-t-xl hover:bg-bg-page-dark ${
+                location.pathname === "/dashboard" ? "nav-active" : ""
+              }`}
+              onClick={() => navigate("/dashboard")}
+            >
               Dashboard
             </button>
-            <button className="p-6 hover:bg-black/5">Payout</button>
-            <button className="p-6 hover:bg-black/5">Wallet</button>
-            <button className="p-6 hover:bg-black/5">Fund&nbsp;Manager</button>
-            <button className="p-6 hover:bg-black/5">Settings</button>
+            <button
+              className={`px-5 md:px-6 lg:px-5 xl:px-6 py-4 rounded-t-xl hover:bg-bg-page-dark ${
+                location.pathname === "/payout" ? "nav-active" : ""
+              }`}
+              onClick={() => navigate("/payout")}
+            >
+              Payout
+            </button>
+            <button
+              className={`px-5 md:px-6 lg:px-5 xl:px-6 py-4 rounded-t-xl hover:bg-bg-page-dark ${
+                location.pathname === "/wallet" ? "nav-active" : ""
+              }`}
+              onClick={() => navigate("/wallet")}
+            >
+              Wallet
+            </button>
+            <button
+              className={`px-5 md:px-6 lg:px-5 xl:px-6 py-4 rounded-t-xl hover:bg-bg-page-dark ${
+                location.pathname === "/fund-manager" ? "nav-active" : ""
+              }`}
+              onClick={() => navigate("/fund-manager")}
+            >
+              Fund&nbsp;Manager
+            </button>
+            <button
+              className={`px-5 md:px-6 lg:px-5 xl:px-6 py-4 rounded-t-xl hover:bg-bg-page-dark ${
+                location.pathname === "/settings" ? "nav-active" : ""
+              }`}
+              onClick={() => navigate("/settings")}
+            >
+              Settings
+            </button>
           </section>
           <div className="hidden lg:flex">
             <Notification />
           </div>
         </nav>
         <main className="bg-bg-page-dark h-full overflow-y-auto p-5">
-          <div className="max-w-6xl h-full m-auto ">
-            <Dashboard />
+          <div className="max-w-6xl h-full m-auto">
+            <Outlet />
           </div>
         </main>
       </section>
