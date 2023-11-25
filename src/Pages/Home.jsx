@@ -183,8 +183,8 @@ const Home = () => {
             <Notification />
           </div>
         </nav>
-        <main className="bg-bg-page-dark h-full overflow-y-auto p-5">
-          <div className="max-w-6xl h-full m-auto">
+        <main className="bg-bg-page-dark h-full overflow-y-auto px-5">
+          <div className="max-w-7xl h-full m-auto">
             <Outlet />
           </div>
         </main>
