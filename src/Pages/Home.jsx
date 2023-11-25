@@ -146,7 +146,7 @@ const Home = () => {
           </div>
         </nav>
         <main className="bg-bg-page-dark h-full overflow-y-auto p-5">
-          <div className="max-w-6xl h-full m-auto">
+          <div className="max-w-6xl h-full m-auto ">
             <Dashboard />
           </div>
         </main>
