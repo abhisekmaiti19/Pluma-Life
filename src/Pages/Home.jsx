@@ -22,6 +22,7 @@ const Home = () => {
             : "min-[320px]:-left-full min-[100px]:-left-[350%]"
         } transition-all duration-500 lg:transition-none`}
       >
+        {/* logo here  */}
         <img src={logo} alt="" className="w-28 mb-16 hidden lg:block" />
         <button
           className="text-white p-2 mb-8  hover:bg-white/10 w-min rounded-xl ml-auto lg:hidden"
@@ -110,6 +111,7 @@ const Home = () => {
           onClick={() => setDrawerOpen(false)}
         ></div>
         <header className="h-16 bg-white flex justify-between items-center p-6 lg:hidden">
+          {/* logo light here  */}
           <img src={logo_light} alt="" className="w-24" />
           <div className="flex">
             <div>
@@ -183,8 +185,8 @@ const Home = () => {
             <Notification />
           </div>
         </nav>
-        <main className="bg-bg-page-dark h-full overflow-y-auto p-5">
-          <div className="max-w-6xl h-full m-auto">
+        <main className="bg-bg-page-dark h-full overflow-y-auto lg:px-5">
+          <div className="min-[1921px]:max-w-7xl h-full m-auto">
             <Outlet />
           </div>
         </main>

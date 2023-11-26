@@ -1,21 +1,12 @@
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 
-export default function Message(message) {
+export default function Message({ message, img }) {
   return (
-    <div className="flex md:text-2xl min-[200px]:text-[20px] gap-3 items-end">
+    <div className="flex min-[200px]:text-[20px] gap-3 items-cente mid:text-[23px]">
       <h1 className="text-brand-dark-blue font-semibold"> Welcome,</h1>
-      <Player
-        src="https://lottie.host/4acb7016-022f-4962-b97a-029509730020/XMfXzCb5w7.json"
-        className="w-fit md:h-[40px] min-[200px]:h-[35px]"
-        speed="1"
-        direction="1"
-        mode="normal"
-        loop
-        autoplay
-      />
-
-      <h1 className="text-border-light-blue"> {message.data}</h1>
+      <h1 className="text-border-light-blue"> {message}</h1>
+      <img src={img} className="h-[30px] w-[30px]" alt="" />
     </div>
   );
 }
