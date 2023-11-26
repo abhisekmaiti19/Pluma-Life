@@ -24,7 +24,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* livecards  */}
+        {/* livecards  ___*/}
         <div className="w-full lg:h-[250px] mt-4 border pt-2 flex flex-col gap-4 overflow-hidden">
           p
         </div>
