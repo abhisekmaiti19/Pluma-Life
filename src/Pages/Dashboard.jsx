@@ -11,16 +11,35 @@ import Statuscard from "../Components/Dashboard/Statuscard";
 
 export default function Dashboard() {
   return (
-    <div className="w-full h-full bg-bg-page-dark border-2 border-solid border-black flex justify-between overflow-hidden">
-      <section className="lg:w-3/5 min-[200px]:w-full  h-full bg-slate-500 border-2 mt-2 p-6 overflow-y-auto gap-4 flex flex-col">
-        <div className="w-full h-1/2 bg-white">p</div>
-        <div className="w-full h-1/2 bg-white">p</div>
-        <div className="w-full h-1/2 bg-white">p</div>
-      </section>
+    <div className="w-full h-[91.5%] bg-bg-page-dark  flex justify-between overflow-hidden">
+      <section className="lg:w-3/5 min-[200px]:w-full h-full mt-2 px-4 gap-4 flex flex-col">
+        <div className="w-full lg:h-[250px] mt-4 pt-2 flex flex-col gap-4 overflow-hidden p-4">
+          <Message message={"Abhisek"} img={hi} />
+          <div className="w-full h-full overflow-x-scroll">
+            <div className="h-full gap-6 flex pb-4">
+              <Statuscard />
+              <Statuscard />
+              <Statuscard />
+            </div>
+          </div>
+        </div>
 
-      <section className="lg:w-2/5 lg:h-full p-6 bg-white rounded-xl border-2 mt-2 lg:block min-[200px]:hidden">
+        {/* livecards  */}
+        <div className="w-full lg:h-[250px] mt-4 border pt-2 flex flex-col gap-4 overflow-hidden">
+          p
+        </div>
+      </section>
+      <section className="lg:w-2/5 lg:h-full p-6 bg-white rounded-xl border-2 mt-2 lg:block min-[200px]:hidden overflow-hidden">
         {/* Anouncement and Important section  */}
-        <Anouncement compimg={mic} text="" />
+        <div className="w-full h-full overflow-y-auto customscroll flex flex-col gap-4">
+          <Anouncement compimg={mic} text="" />
+          <Importantcard
+            compimg={imp}
+            text=""
+            binance={binance}
+            ironfx={ironfx}
+          />
+        </div>
       </section>
     </div>
   );
