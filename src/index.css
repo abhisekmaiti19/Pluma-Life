@@ -92,6 +92,10 @@ body {
   display: none;
 }
 
+.debug {
+  border: 2px solid black;
+}
+
 /* .importantbg {
   border: solid 2px;
   border-radius: 10px;
