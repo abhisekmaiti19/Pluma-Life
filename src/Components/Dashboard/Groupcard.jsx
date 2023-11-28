@@ -1,13 +1,14 @@
 import React from "react";
 import img from "../../assets/coin.png";
+import DataCard from "../DataCard";
 
 export default function Groupcard() {
   return (
-    <div className="w-full lg:min-h-[200px] min-[750px]:min-h-[300px] min-[1640px]:min-h-[300px] bg-bordergradient-1 p-[2px] rounded-[16px] shadow-black shadow relative">
-      <span className="absolute bg-red-600 w-[10px] h-[10px] rounded-full animate-ping"></span>
-      <div className="w-full h-full bg-white rounded-[14px] p-6 min-[1640px]:pb-[50px] ">
+    <div className="w-full bg-bordergradient-1 p-[2px] rounded-[8px] shadow-black shadow relative">
+      <span className="absolute bg-red-600 w-[10px] h-[10px] rounded-full animate-ping -top-1 -left-1"></span>
+      <div className="w-full h-full bg-white rounded-[6px] p-6 ">
         {/* card heading  */}
-        <div className="w-full h-1/3 min-[1640px]:h-2/5 flex justify-between items-center">
+        <div className="w-full h-1/3 min-[1640px]:h-2/5 flex justify-between items-center pb-4">
           <div className="w-[40px] h-[40px] min-[1640px]:w-[60px] min-[1640px]:h-[60px] p-1 rounded-full flex items-center bg-red-200">
             <img src={img} alt="" className="w-full" />
           </div>
@@ -40,34 +41,10 @@ export default function Groupcard() {
           </div>
         </div>
         {/* Card heading End  */}
-        <div className="items-center w-full min-[750px]:h-4/6 xl:h-4/6 min-[1640px]:h-5/6 flex flex-wrap justify-between">
-          <div className="min-[750px]:w-[200px] lg:w-[100px] xl:w-[130px] min-[1440px]:w-[180px] min-[1640px]:w-[200px] h-2/3 border border-black rounded-xl text-sm flex flex-col items-start justify-evenly px-4 relative bg-white">
-            <span className="absolute w-[6px] h-[6px] bg-red-500 top-2 right-2 rounded-full animate-pulse "></span>
-            <h1 className="min-[750px]:text-[18px] lg:text-[12px] min-[1440px]:text-base font-semibold min-[1640px]:text-lg">
-              Card Title 1
-            </h1>
-            <h1 className="lg:text-[10px] min-[1440px]:font-normal lg:font-black min-[1440px]:text-sm font-normal min-[1640px]:text-base">
-              125678.00 bv
-            </h1>
-          </div>
-          <div className="min-[750px]:w-[200px] lg:w-[100px] xl:w-[130px] min-[1440px]:w-[180px] min-[1640px]:w-[200px] h-2/3 border border-black rounded-xl text-sm flex flex-col items-start justify-evenly px-4 relative bg-white">
-            <span className="absolute w-[6px] h-[6px] bg-red-500 top-2 right-2 rounded-full animate-pulse "></span>
-            <h1 className="min-[750px]:text-[18px] lg:text-[12px] min-[1440px]:text-base font-semibold min-[1640px]:text-lg">
-              Card Title 1
-            </h1>
-            <h1 className="lg:text-[10px] min-[1440px]:font-normal lg:font-black min-[1440px]:text-sm font-normal min-[1640px]:text-base">
-              125678.00 bv
-            </h1>
-          </div>
-          <div className="min-[750px]:w-[200px] lg:w-[100px] xl:w-[130px] min-[1440px]:w-[180px] min-[1640px]:w-[200px] h-2/3 border border-black rounded-xl text-sm flex flex-col items-start justify-evenly px-4 relative bg-white">
-            <span className="absolute w-[6px] h-[6px] bg-red-500 top-2 right-2 rounded-full animate-pulse "></span>
-            <h1 className="min-[750px]:text-[18px] lg:text-[12px] min-[1440px]:text-base font-semibold min-[1640px]:text-lg">
-              Card Title 1
-            </h1>
-            <h1 className="lg:text-[10px] min-[1440px]:font-normal lg:font-black min-[1440px]:text-sm font-normal min-[1640px]:text-base ">
-              125678.00 bv
-            </h1>
-          </div>
+        <div className="items-center w-full flex flex-col sm:flex-row gap-2 justify-between ">
+          <DataCard title={'Card Title 1'} value={'125678.00 bv'} color={'#ff0000'}/>
+          <DataCard title={'Card Title 1'} value={'125678.00 bv'} color={'#667700'}/>
+          <DataCard title={'Card Title 1'} value={'125678.00 bv'} color={'#ff0000'}/>
         </div>
       </div>
     </div>
