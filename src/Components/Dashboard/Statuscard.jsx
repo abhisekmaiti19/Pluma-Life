@@ -1,39 +1,22 @@
 import React from "react";
 import face from "../../assets/statusface.png";
 
-export default function Statuscard() {
+export default function Statuscard({content}) {
   return (
-    <div className="min-w-[260px] min-h-full bg-white border-[1px] border-black rounded-xl p-2 flex flex-col gap-2">
-      <div className="w-full h-16 bg-brand-dark-blue rounded-xl border-[2px] border-white flex items-center px-2 justify-around">
-        <img src={face} alt="" />
-        <h1 className="text-[18px] text-white font-bold">Current Status</h1>
+    <div className={`min-w-full min-[431px]:min-w-[260px] min-h-md bg-white border-[1px] shadow-sm rounded-xl flex flex-grow flex-col ${content?'':'animate-pulse'}`}>
+      <div className={`w-full h-20 bg-${content?'brand-dark-blue':'gray-300'} rounded-xl flex items-center px-2 justify-center gap-5`}>
+        <img src={content?content.image||face:''} alt="" className="w-8 h-8"/>
+        <h1 className="text-md text-white font-bold">{content?.title}</h1>
       </div>
-      <div className="h-2/3 w-full flex flex-col justify-center">
-        <div className="w-full h-1/3 flex justify-center p-1">
-          <h1 className="w-1/2 h-full text-[12px] font-semibold flex justify-start items-center">
-            Business Ratio
-          </h1>
-          <h1 className="w-1/2 h-full text-[14px] font-semibold flex justify-center items-center ">
-            20256 bv
-          </h1>
-        </div>
-        <div className="w-full h-1/3 flex justify-center p-1">
-          <h1 className="w-1/2 h-full text-[12px] font-semibold flex justify-start items-center">
-            My Rank
-          </h1>
-          <h1 className="w-1/2 h-full text-[14px] font-semibold flex justify-center items-center ">
-            20256 bv
-          </h1>
-        </div>
-
-        <div className="w-full h-1/3 flex justify-center p-1">
-          <h1 className="w-1/2 h-full text-[12px] font-semibold flex justify-start items-center whitespace-nowrap">
-            Performance Bonus
-          </h1>
-          <h1 className="w-1/2 h-full text-[14px] font-semibold flex justify-center items-center ">
-            20256 bv
-          </h1>
-        </div>
+      <div className="flex-auto w-full flex items-center justify-center py-2">
+        <table className="text-xs font-medium mx-2">
+        {Object.keys(content?.data || {}).map(key=> (
+            <tr className="w-full">
+              <td className="p-2 min-w-[140px] text-blue-900 font-bold">{key}</td>
+              <td className="p-2 whitespace-nowrap">{content.data[key]}</td>
+            </tr>
+          ))}
+        </table>
       </div>
     </div>
   );

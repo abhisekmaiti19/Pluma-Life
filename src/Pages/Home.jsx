@@ -138,7 +138,7 @@ const Home = () => {
             </button>
           </div>
         </header>
-        <nav className="border-b border-solid border-black/10 w-full bg-white min-[200px]:overflow-x-auto flex gap-10 justify-between items-center h-20 customscroll">
+        <nav className="border-b border-solid border-black/10 w-full bg-white min-[200px]:overflow-x-auto flex gap-10 justify-between items-center flex-shrink-0 customscroll">
           <section className=" text-gray-700 font-600 flex gap-1 xl:gap-5 2xl:gap-7 2xl:text-lg p-2 pb-0">
             <button
               className={`px-5 md:px-6 lg:px-5 xl:px-6 py-4 rounded-t-xl hover:bg-bg-page-dark ${
