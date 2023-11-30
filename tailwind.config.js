@@ -18,6 +18,7 @@ module.exports = {
           "linear-gradient(140.56deg,#071a53 10%,rgba(7, 26, 83, 0) 109.66%)",
         "bggradient-1":
           "linear-gradient(140.56deg, #75b1de 0%, #ffffff 109.66%)",
+        click: "#4A5981, #D9D9D900",
       },
     },
   },
