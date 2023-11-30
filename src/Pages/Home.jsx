@@ -103,7 +103,7 @@ const Home = () => {
           </section>
         </section>
       </aside>
-      <section className="h-screen w-full overflow-hidden">
+      <section className="h-full w-full overflow-hidden flex flex-col">
         <div
           className={`drawer-backdrop bg-white/70 ${
             drawerOpen ? "backdrop-animation" : ""

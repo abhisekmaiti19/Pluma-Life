@@ -4,6 +4,7 @@ import img from "../../assets/coin.png";
 export default function Groupcard() {
   return (
     <div className="w-full lg:min-h-[200px] min-[750px]:min-h-[300px] min-[1640px]:min-h-[300px] bg-bordergradient-1 p-[2px] rounded-[16px] shadow-black shadow relative">
+      <span className="absolute bg-red-600 w-[8px] h-[8px] rounded-full"></span>
       <span className="absolute bg-red-600 w-[10px] h-[10px] rounded-full animate-ping"></span>
       <div className="w-full h-full bg-white rounded-[14px] p-6 min-[1640px]:pb-[50px] ">
         {/* card heading  */}
