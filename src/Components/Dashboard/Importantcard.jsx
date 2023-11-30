@@ -1,8 +1,8 @@
 import React from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+// import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Importantcard({ compimg, text, binance, ironfx }) {
-  const mytext = <p className="overflow-y-auto">{text}</p>;
+  // const mytext = <p className="overflow-y-auto">{text}</p>;
   return (
     <div className=" lg:w-full lg:h-[350px] xl:h-[450px] sm:hidden lg:block lg:p-[2px] flex flex-col gap-6 items-center bg-bordergradient-1 rounded-[12px]">
       <div
