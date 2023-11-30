@@ -9,7 +9,7 @@ export default function Importantcard({ compimg, text, binance, ironfx }) {
         className="w-full h-full rounded-[10px] bg-white xl:p-6
                     lg:p-4 flex flex-col gap-6 items-start bg-bggradient-1 relative"
       >
-        <h1 className="w-3/6 xl:text-2xl lg:text-sm lg:font-semibold rounded p-3 flex justify-center bg-bordergradient-1 text-white">
+        <h1 className="w-fit px-2 xl:text-2xl lg:text-sm lg:font-semibold rounded p-3 flex justify-center bg-bordergradient-1 text-white">
           Important
         </h1>
         <img

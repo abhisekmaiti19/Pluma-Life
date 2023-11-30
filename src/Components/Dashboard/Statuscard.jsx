@@ -3,8 +3,8 @@ import face from "../../assets/statusface.png";
 
 export default function Statuscard() {
   return (
-    <div className="min-w-[260px] min-h-full bg-white border-[1px] border-black rounded-xl p-2">
-      <div className="w-full h-1/3 bg-brand-dark-blue rounded-xl border-[2px] border-white flex items-center px-2 justify-around">
+    <div className="min-w-[260px] min-h-full bg-white border-[1px] border-black rounded-xl p-2 flex flex-col gap-2">
+      <div className="w-full h-16 bg-brand-dark-blue rounded-xl border-[2px] border-white flex items-center px-2 justify-around">
         <img src={face} alt="" />
         <h1 className="text-[18px] text-white font-bold">Current Status</h1>
       </div>
@@ -27,7 +27,7 @@ export default function Statuscard() {
         </div>
 
         <div className="w-full h-1/3 flex justify-center p-1">
-          <h1 className="w-1/2 h-full text-[12px] font-semibold flex justify-start items-center">
+          <h1 className="w-1/2 h-full text-[12px] font-semibold flex justify-start items-center whitespace-nowrap">
             Performance Bonus
           </h1>
           <h1 className="w-1/2 h-full text-[14px] font-semibold flex justify-center items-center ">

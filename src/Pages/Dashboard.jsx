@@ -12,11 +12,11 @@ import Groupcard from "../Components/Dashboard/Groupcard";
 
 export default function Dashboard() {
   return (
-    <div className="w-full h-full bg-bg-page-dark flex justify-between relative">
-      <section className="lg:w-3/5 min-[200px]:w-full h-full px-4 flex flex-col overflow-y-auto">
-        <div className="w-full relative lg:min-h-[350px] flex flex-col gap-2 overflow-hidden ">
+    <div className="w-full bg-bg-page-dark flex justify-between relative overflow-hidden">
+      <section className="lg:w-4/6 min-[200px]:w-full h-full px-4 flex flex-col overflow-y-auto">
+        <div className="w-full relative flex flex-col gap-2">
           <Message message={"Abhisek"} img={hi} />
-          <div className="w-full h-full rounded-r-xl overflow-x-scroll">
+          <div className="w-full rounded-r-xl overflow-x-scroll">
             {/* right arrow button  */}
 
             {/* <div
@@ -37,9 +37,9 @@ export default function Dashboard() {
                   d="M8.25 4.5l7.5 7.5-7.5 7.5"
                 />
               </svg>
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className="w-[50px] h-1/2 rounded-l-xl bg-gradient-to-r from-brand-dark-blue left-0 border-l-white  
             absolute flex justify-center items-center text-white hover:transition-all hover:bg-brand-dark-blue delay-50 hover:scale-100 duration-500 ease-out hover:cursor-pointer"
             >
@@ -60,7 +60,7 @@ export default function Dashboard() {
             </div> */}
 
             {/* right arrow end  */}
-            <div className="h-full gap-6 flex pb-4 py-4 justify-evenly overflow-auto">
+            <div className="gap-6 flex pb-4 overflow-auto">
               <Statuscard />
               <Statuscard />
               <Statuscard />
@@ -69,7 +69,7 @@ export default function Dashboard() {
         </div>
 
         {/* livecards  ___*/}
-        <div className="w-full h-full flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-4 pt-5 pb-5">
           <Groupcard />
           <Groupcard />
           <Groupcard />
@@ -78,9 +78,9 @@ export default function Dashboard() {
           <Groupcard />
         </div>
       </section>
-      <section className="lg:w-2/5 lg:h-full p-6 bg-white rounded-xl border-2 mt-2 lg:block min-[200px]:hidden overflow-hidden ">
+      <section className="lg:w-1/4 lg:h-full overflow-y-auto lg:block min-[200px]:hidden fixed top-[70px] right-[1%]">
         {/* Anouncement and Important section  */}
-        <div className="w-full h-full overflow-y-auto customscroll flex flex-col gap-4 ">
+        <div className="customscroll flex flex-col gap-4 p-6 m-4 border-2 bg-white rounded-xl">
           <Anouncement compimg={mic} text="" />
           <Importantcard
             compimg={imp}

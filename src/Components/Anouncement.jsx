@@ -14,7 +14,7 @@ export default function Anouncement({ compimg, text }) {
         className="lg:h-2/3 lg:mt-2 absolute bottom-0 right-0 opacity-5"
       />
       <div className="w-full lg:h-[30px] xl:h-[60px] flex gap-5 justify-start relative">
-        <h1 className="xl:text-xl lg:text-sm flex items-center border w-3/5 bg-bordergradient-1 text-white rounded font-bold  flex-col justify-center">
+        <h1 className="xl:text-xl lg:text-sm flex items-center border w-fit px-2 bg-bordergradient-1 text-white rounded font-bold  flex-col justify-center">
           Anouncement
         </h1>
       </div>
